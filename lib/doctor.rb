@@ -20,7 +20,7 @@ def  new_appointment(patient, date)
     Appointment.all.select { |appointment| appointment.doctor == self }
   end
 
-  def patients
-    appointments.map(&:patient)
+   def patients
+    appointments.map {|appointment| appointment.patient}
   end
 end
